@@ -13,6 +13,7 @@ import CursoList from './routed/CursoList'
 import CursoForm from './routed/CursoForm'
 import HomePage from './routed/HomePage'
 import About from './routed/About'
+import LoginForm from './routed/LoginForm'
 
 const customTheme = createTheme({
   palette: {
@@ -41,6 +42,7 @@ function App() {
           <Box component="main" sx={{ margin: '24px' }}>
             <Routes>
               <Route path="/" element={<HomePage/>} />
+              <Route path="/login" element={<LoginForm/>} />
             </Routes>
           </Box>
 

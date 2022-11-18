@@ -51,6 +51,12 @@ export default function MainMenu() {
         }}
       >
         <MenuItem onClick={handleClose}>
+          <Link to="/login" className={classes.link}>Autenticar-se</Link>
+        </MenuItem>
+        <MenuItem>
+          <hr className={classes.link}/>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
           <Link to="/aluno" className={classes.link}>Listagem de alunos</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
