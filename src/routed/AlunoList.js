@@ -169,8 +169,8 @@ export default function AlunoList() {
 
     async function fetchData(newState = state) {
         try {
-            const response = await api.get('aluno')
-            setState({...newState, data: response.data, isDialogOpen: false})
+            const response = await api.get('aluno').json()
+            setState({...newState, data: response, isDialogOpen: false})
         }
         catch(erro) {
             // Mostrar erro com barra de alerta
@@ -197,7 +197,7 @@ export default function AlunoList() {
 
     async function deleteItem() {
       try {
-        await api.delete(`aluno/${deleteId}`)
+        await api.delete(`alunos/${deleteId}`)
         // Fecha a caixa de diálogo e exibe a barra de alerta
         const newState = {
           ...state, 
